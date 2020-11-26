@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let time = new Date();
+        let aa = (parseInt(time.getTime()/1000) + 7200)*1000;
+        console.log(aa);
+        time.setTime(aa);
+        console.log(time);
+        let time1 = `${time}`;
+
+        console.log(time1.substr(16,5))
+    </script>
+</body>
+</html>

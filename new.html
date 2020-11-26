@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background: #00f;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" class="div1" name='div1'>+</div>
+    <script src="./tools.js"></script>
+    <script>
+        // var res = getUrlStr();
+        // console.log(res);
+        // function fun1(){
+        //     console.log(123);
+        // }
+        // var oDiv = document.getElementsByTagName('div')[0];
+        // var oDiv1 = document.querySelector('div');
+        // console.log(oDiv);
+        // console.log(oDiv1);
+        // function mySetEvent(element , type , fun){
+        //     // 如果有 addEventListener 这个方法,证明是普通浏览器
+        //     // 可以使用 addEventListener 这个方法
+        //     if(element.addEventListener){
+        //         // 给标签,直接绑定事件类型和事件处理函数
+        //         element.addEventListener( type , fun );
+        //     }else{
+        //     // 没有 addEventListener 这个方法,证明是低版本IE浏览器
+        //         // 使用 低版本IE浏览器语法
+        //         element.attachEvent( 'on' + type , fun );
+        //     }
+        // }
+        // function setListener(element , type , func){
+        //     if(element.addEventListener){
+        //         element.addEventListener(type , func);
+        //     }else{
+        //         element.attachEvent( 'on' + type , func );
+        //     }
+        // }
+        // setListener(oDiv, 'click',fun1);
+
+
+        let oDiv = document.querySelector('div');
+        oDiv.addEventListener( 'click' , ()=>{
+            move(oDiv , {left:600,top:555,opacity:.5},fun1);
+            function fun1(){
+                oDiv.style.background = 'red';
+                oDiv.style.color = 'white';
+            }
+        } )
+        
+
+    </script>
+</body>
+</html>
